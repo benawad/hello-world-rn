@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  Text
-} from 'react-native';
+import Routes from './routes';
 
-export default () => {
-  console.log('HELLO I AM LOGGING');
-  return (
-    <Text>Hello World!</Text>
-  );
-};
+export default () => (
+  <Routes />
+);
