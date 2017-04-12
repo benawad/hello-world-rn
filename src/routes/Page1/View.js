@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-export default () => (
+export default ({ counter, actions: { incrementCounter } }) => (
   <View>
     <Text>Hello from page1</Text>
     <Button 
@@ -15,5 +15,9 @@ export default () => (
     <Button 
       title='Go to Page 3'
       onPress={() => Actions.page3({})} />
+    <Button 
+      title='Increment'
+      onPress={() => incrementCounter()} />
+    <Text>{ counter }</Text>
   </View>
 );
